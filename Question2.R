@@ -26,6 +26,9 @@ print("the rows with Sepal.Width > 3.5:")
 file[(file$Sepal.Width > 3.5),]
 
 #(4)write the data for the species setosa to a comma-deimited file names 'setosa.csv'
+setosa <- file[file$Species == "setosa",]
+write.table(setosa, file = "setosa.csv", sep = ",")
+
 
 #(5)caculate the mean, minimum, and maximum of Patal.Length for observations from virginica:
 
