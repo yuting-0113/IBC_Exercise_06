@@ -2,12 +2,12 @@
 file <- read.csv(file ="iris.csv")
   
 #Question2:
-#(1) print the last 2 rows in the last columns to the R terminal:
+#(1) print the last 2 rows in the last 2 columns to the R terminal:
 
-#get the last column of file into newdata:
-newdata <- file[,4]
+#get the last 2 column of file into newdata:
+LastColumn2 <- file[, 4:ncol(file)]
 #print the last 2 rows
-tail(newdata,2)
+tail(LastColumn2,2)
 
 #(2)get the number of observations for each species included in the data set:
 
@@ -21,8 +21,6 @@ nrow(file[file$Species == "versicolor",])
 nrow(file[file$Species == "virginica",])
 
 #(3)get the rows with Sepal.Width >3.5:
-
-print("the rows with Sepal.Width > 3.5:")
 file[(file$Sepal.Width > 3.5),]
 
 #(4)write the data for the species setosa to a comma-deimited file names 'setosa.csv'
